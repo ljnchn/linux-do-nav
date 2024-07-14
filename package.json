@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.8.0",
-    "astro": "^4.11.5",
+    "@astrojs/preact": "^3.5.0",
+    "preact": "^10.22.1",
     "typescript": "^5.5.3"
   },
   "devDependencies": {
     "@unocss/reset": "^0.61.3",
+    "astro": "^4.11.5",
     "unocss": "^0.61.3"
   }
 }
