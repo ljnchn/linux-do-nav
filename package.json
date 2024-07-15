@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.8.0",
-    "@astrojs/preact": "^3.5.0",
-    "preact": "^10.22.1",
+    "@astrojs/react": "^3.6.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "typescript": "^5.5.3"
   },
   "devDependencies": {

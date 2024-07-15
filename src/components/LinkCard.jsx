@@ -1,6 +1,5 @@
 
-import { h } from 'preact';
-import { useState, useEffect } from 'preact/hooks';
+import { useState, useEffect } from 'react';
 
 const LinkCard = () => {
   const [links, setLinks] = useState([]);
@@ -12,20 +11,20 @@ const LinkCard = () => {
   }, []);
 
   return (
-    <div class="max-w-6xl mx-auto">
-      <div class="mb-6 max-w-md mx-auto">
+    <div className="max-w-6xl mx-auto">
+      <div className="mb-6 max-w-md mx-auto">
         <input
           type="text"
           placeholder="搜索 AI 工具..."
-          class="w-full py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
         {links.map(link => (
-          <a href={link.href} class="tool-card bg-white p-3 rounded-lg shadow-sm hover:shadow-md dark:bg-gray-8">
-            <h3 class="text-sm font-semibold mb-1 text-white">{link.name}</h3>
-            <p class="text-xs text-gray-600">{link.description}</p>
+          <a href={link.href} className="tool-card bg-white p-3 rounded-lg shadow-sm hover:shadow-md dark:bg-gray-8">
+            <h3 className="text-sm font-semibold mb-1 text-white">{link.name}</h3>
+            <p className="text-xs text-gray-600">{link.description}</p>
           </a>
         ))}
       </div>
