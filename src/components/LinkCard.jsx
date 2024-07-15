@@ -1,36 +1,47 @@
+import React from 'react';
+import { Search } from 'lucide-react';
 
-import { useState, useEffect } from 'react';
+const AITool = ({ name, description, link }) => (
+  <a href={link} className="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+    <h3 className="text-xl font-semibold mb-2">{name}</h3>
+    <p className="text-gray-600">{description}</p>
+  </a>
+);
 
-const LinkCard = () => {
-  const [links, setLinks] = useState([]);
-
-  useEffect(() => {
-    fetch('http://127.0.0.1:8788/api/links')
-      .then(response => response.json())
-      .then(data => {console.log('Fetched links:', data);setLinks(data)});
-  }, []);
+const AINavigationSite = () => {
+  const aiTools = [
+    { name: "ChatGPT", description: "强大的对话AI", link: "#" },
+    { name: "DALL-E", description: "AI图像生成", link: "#" },
+    { name: "Midjourney", description: "AI艺术创作", link: "#" },
+    { name: "Copilot", description: "AI编程助手", link: "#" },
+    { name: "Synthesia", description: "AI视频生成", link: "#" },
+    { name: "Jasper", description: "AI文案写作", link: "#" },
+  ];
 
   return (
-    <div className="max-w-6xl mx-auto">
-      <div className="mb-6 max-w-md mx-auto">
-        <input
-          type="text"
-          placeholder="搜索 AI 工具..."
-          className="w-full py-2 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
-      </div>
+    <div className="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h1 className="text-4xl font-bold text-center mb-12">AI 导航站</h1>
+        
+        <div className="mb-8 max-w-xl mx-auto">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="搜索 AI 工具..."
+              className="w-full py-2 px-4 pr-10 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+            <Search className="absolute right-3 top-2.5 h-5 w-5 text-gray-400" />
+          </div>
+        </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        {links.map(link => (
-          <a href={link.href} className="tool-card bg-white p-3 rounded-lg shadow-sm hover:shadow-md dark:bg-gray-8">
-            <h3 className="text-sm font-semibold mb-1 text-white">{link.name}</h3>
-            <p className="text-xs text-gray-600">{link.description}</p>
-          </a>
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {aiTools.map((tool, index) => (
+            <AITool key={index} {...tool} />
+          ))}
+        </div>
       </div>
     </div>
-
   );
 };
 
-export default LinkCard;
+export default AINavigationSite;
