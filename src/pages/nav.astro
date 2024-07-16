@@ -1,10 +1,113 @@
 ---
-import NavLayout from '../layouts/NavLayout.astro';
+import NavLayout from "../layouts/NavLayout.astro";
 import LinkCard from "../components/LinkCard.jsx";
 ---
 
 <NavLayout title="Welcome to Astro.">
-	<section>
-		<LinkCard client:load />
-	</section>
-</NavLayout>	
+  <section>
+    <LinkCard client:load />
+  </section>
+  <section class="max-w-6xl mx-auto mt-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <!-- Column 1 -->
+      <div class="space-y-4">
+        <!-- First Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>伙们，推荐点耐看的小说</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Second Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>好像解决了Echarts长达7年之久的bug</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Third Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>各位道友助我筑基</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Fourth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>[重磅 v0.2.0] 小玩具也能有炸裂功能</span>
+          <span class="text-gray-400">软件分享 Claude Fuculade</span>
+        </div>
+        <!-- Fifth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>白嫖机场订阅] 剩余流量52.4TB</span>
+          <span class="text-purple-500">一机建茶</span>
+        </div>
+        <!-- Sixth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>[猛料复活] 给论坛3级用户开了个不限量 GPT-4 的Chatbot（目前不可用，等待ing）</span>
+          <span class="text-gray-400">运营反馈 chatgpt</span>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="space-y-4">
+        <!-- First Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>伙们，推荐点耐看的小说</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Second Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>好像解决了Echarts长达7年之久的bug</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Third Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>各位道友助我筑基</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Fourth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>[重磅 v0.2.0] 小玩具也能有炸裂功能</span>
+          <span class="text-gray-400">软件分享 Claude Fuculade</span>
+        </div>
+        <!-- Fifth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>白嫖机场订阅] 剩余流量52.4TB</span>
+          <span class="text-purple-500">一机建茶</span>
+        </div>
+        <!-- Sixth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>[猛料复活] 给论坛3级用户开了个不限量 GPT-4 的Chatbot（目前不可用，等待ing）</span>
+          <span class="text-gray-400">运营反馈 chatgpt</span>
+        </div>
+      </div>
+      <!-- Column 3 -->
+      <div class="space-y-4">
+        <!-- First Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>伙们，推荐点耐看的小说</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Second Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>好像解决了Echarts长达7年之久的bug</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Third Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>各位道友助我筑基</span>
+          <span class="text-purple-500">播七给三</span>
+        </div>
+        <!-- Fourth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>[重磅 v0.2.0] 小玩具也能有炸裂功能</span>
+          <span class="text-gray-400">软件分享 Claude Fuculade</span>
+        </div>
+        <!-- Fifth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>白嫖机场订阅] 剩余流量52.4TB</span>
+          <span class="text-purple-500">一机建茶</span>
+        </div>
+        <!-- Sixth Post -->
+        <div class="flex items-center justify-between bg-gray-800 p-4 rounded-lg">
+          <span>[猛料复活] 给论坛3级用户开了个不限量 GPT-4 的Chatbot（目前不可用，等待ing）</span>
+          <span class="text-gray-400">运营反馈 chatgpt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</NavLayout>
